@@ -14,18 +14,26 @@ const btnSwitch = document.getElementById('btnSwitch');
 
 // hero color cars 
 // let heroCar = document.getElementsByClassName('hero_car');
-let heroColor = document.getElementById('hero-car-src');
+// let heroColor = document.getElementById('hero-car-src');
 
 
 // document.getElementById("blueCar").src="src\asset\img\pixel-blue-car.png";
 
 
+const imgs = document.getElementById('imgs');
+const img = document.querySelectorAll('#carImg img');
+const src = document.getElementById('hero-car-src');
 
-
+let idx = 0;
 
 btnSwitch.addEventListener('click',() => {
-    // switchColor.src = 'img/pixel-blue-car.png';
-    heroColor.src = '/src/asset/img/pixel-green-car.png';
+
+    // heroColor.src = '/src/asset/img/pixel-green-car.png';
+
+    if(idx > img.length - 1) {
+        idx = 0;
+
+    }
 })
 
 

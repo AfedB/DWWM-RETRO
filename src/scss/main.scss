@@ -348,7 +348,7 @@ nav {
       box-shadow: inset -11px 8px 10px 4px rgba(5, 5, 5, 0.24);
       // background-color: rgba(255, 255, 255, 0.308);
       img {
-        animation: pulse 300ms ease 0s 1 normal forwards;
+        animation: pulse 300ms ease 0s 1 normal forwards, broken 500ms ease .3s  infinite forwards ;
       }
       span {
         color: black;
@@ -449,6 +449,14 @@ nav {
         opacity: 1;
         transform: translateX(0);
       }
+    }
+  }
+  @keyframes broken {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.9);
     }
   }
   img {
