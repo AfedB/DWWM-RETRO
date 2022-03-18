@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-font: "Ranga", cursive;
+  --user-font: "Ranchers", cursive;
+}
+
+html {
+  font-family: var(--primary-font);
+  color: white;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+body img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1024px;
+  min-width: 1024px;
+  margin: 0 auto;
+  background: url(/src/asset/img/bg-sun-1.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  cursor: url(/src/asset/img/pixel-green-car.png), auto;
+}
+
+.wrapper #toast-container {
+  position: absolute;
+  bottom: 128px;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  width: 100%;
+  height: 130px;
+  background-color: rgba(255, 255, 255, 0.144);
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  border-right: 1px solid #ffffff2b;
+  cursor: pointer;
+}
+
+nav .logo:hover::after {
+  content: url(/src/asset/img/futuristiccity.gif);
+  position: absolute;
+  top: 0px;
+  left: 17%;
+  width: 591px;
+  height: 130px;
+}
+
+nav .logo img {
+  position: relative;
+}
+
+nav .logo img:hover {
+  content: url(/src/asset/img/retrowavediablo2.gif);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 173px;
+  height: 130px;
+}
+
+nav .user {
+  display: flex;
+  padding: 1rem;
+  height: 100%;
+  align-items: center;
+  border-left: 1px solid #ffffff2b;
+  position: relative;
+  z-index: 1;
+}
+
+nav .user::after {
+  content: url(/src/asset/img/brokenweb2.gif);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+nav .user .user_icon {
+  cursor: pointer;
+}
+
+nav .user .user_icon img {
+  width: 100%;
+  max-width: 50px;
+  filter: drop-shadow(0 0 0.1rem rgba(255, 0, 255, 0.527));
+}
+
+nav .user .user_container {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--user-font);
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+nav .user .user_container .user_name {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 0 0.3rem black);
+  cursor: pointer;
+}
+
+nav .user .user_container .level-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+nav .user .user_container .level-container .user_level {
+  font-size: 0.8rem;
+  filter: drop-shadow(0 0 0.1rem white);
+  cursor: pointer;
+}
+
+nav .user .user_container .level-container .progress_bar {
+  width: 125px;
+  height: 13px;
+  background: #9c9c9c;
+  box-shadow: inset 0px 4px 6px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  margin-top: 5px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.1rem white);
+}
+
+nav .user .user_container .level-container .progress_bar::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 30%;
+  height: 13px;
+  background-color: #ff7a00;
+  box-shadow: inset 0px 4px 6px 1px rgba(0, 0, 0, 0.25);
+}
+
+.nav-top {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 260px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.main article {
+  margin: 0 auto;
+  height: 100%;
+  float: left;
+  border-radius: 140px;
+}
+
+.main article .hero_car {
+  width: 100%;
+  min-width: 700px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.main article .hero_car img {
+  width: 100%;
+  max-width: 629px;
+  animation: stutter 10s linear infinite alternate-reverse;
+  filter: drop-shadow(0 0 0.75rem black);
+  margin-top: 5rem;
+}
+
+@keyframes stutter {
+  0% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 0rem #dc14d2);
+  }
+  25% {
+    transform: translateY(50px);
+    filter: drop-shadow(0 0 1rem #dc14d2);
+  }
+  50% {
+    transform: translateY(100px);
+    filter: drop-shadow(0 0 2.5rem #dc14d2);
+  }
+  100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 0 5rem #dc14d2);
+  }
+}
+
+.main article .japan-text {
+  position: relative;
+  top: -89%;
+  left: 56%;
+}
+
+.main article .japan-text img {
+  max-width: 256px;
+  opacity: 0;
+  animation: jap 1s 3s ease forwards;
+  transition: all 1s;
+}
+
+@keyframes jap {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 2rem white);
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 0.2rem white);
+  }
+}
+
+.main aside {
+  padding: 0.5rem;
+  width: 244px;
+  min-width: 244px;
+  height: 80%;
+  background-color: #ffffff1a;
+  margin: auto 0;
+  margin-right: 1rem;
+  filter: drop-shadow(0 0 0.1rem white);
+  background-color: #ffffff0a;
+}
+
+.main aside span {
+  width: 100%;
+  font-size: 2.5rem;
+  position: relative;
+  line-height: 33px;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+.main aside span::after {
+  content: "";
+  position: absolute;
+  bottom: 34px;
+  left: -1px;
+  width: 220px;
+  height: 2px;
+  background: white;
+}
+
+.main aside #purple-car-specs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main aside #blue-car-specs,
+.main aside #green-car-specs,
+.main aside #yellow-car-specs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: none;
+}
+
+.nav-bottom {
+  width: 100%;
+  height: 130px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  filter: drop-shadow(0 0 0.1rem white);
+}
+
+.nav-bottom .btn {
+  padding: 1.5em;
+  width: 15%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ffffff2b;
+  position: relative;
+  box-shadow: 0px 4px 6px 1px rgba(160, 160, 160, 0.25);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-bottom .btn:active {
+  transform: translate(-4px, -12px);
+}
+
+.nav-bottom .btn:hover {
+  box-shadow: inset -11px 8px 10px 4px rgba(5, 5, 5, 0.24);
+}
+
+.nav-bottom .btn:hover img {
+  animation: pulse 300ms ease 0s 1 normal forwards;
+}
+
+.nav-bottom .btn:hover span {
+  color: black;
+  filter: drop-shadow(0 0 0.1rem black);
+}
+
+.nav-bottom .btn:hover p {
+  color: black;
+  filter: drop-shadow(0 0 0.1rem black);
+  text-shadow: -6px 2px 7px #e00000ad;
+  z-index: 1;
+}
+
+.nav-bottom .btn:nth-child(1):hover::before {
+  content: url(/src/asset/img/savebugged.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(2):hover::before {
+  content: url(/src/asset/img/carselection3.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(3):hover::before {
+  content: url(/src/asset/img/upgrade.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(4):hover::before {
+  content: url(/src/asset/img/replay.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(5):hover::before {
+  content: url(/src/asset/img/keybinding.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(6):hover::before {
+  content: url(/src/asset/img/respawn.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.nav-bottom .btn:nth-child(7):hover::before {
+  content: url(/src/asset/img/giphy.gif);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-bottom img {
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.nav-bottom span {
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-bottom p {
+  font-size: 3.75rem;
+}
+
+@media screen and (max-width: 960px) {
+  body {
+    width: 100%;
+    height: 100vh;
+    background: url(/src/asset/img/borkenweb.gif);
+    background-repeat: repeat;
+    background-size: contain;
+  }
+  .wrapper {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
