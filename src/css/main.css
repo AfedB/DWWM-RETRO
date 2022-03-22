@@ -286,14 +286,24 @@ nav .user .user_container .level-container .progress_bar::before {
   justify-content: space-evenly;
 }
 
-.main aside #blue-car-specs,
-.main aside #green-car-specs,
-.main aside #yellow-car-specs {
+.main aside .parent-div {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.main aside .show {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main aside .hide {
   display: none;
 }
 

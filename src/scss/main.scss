@@ -301,15 +301,24 @@ nav {
       flex-direction: column;
       justify-content: space-evenly;
     }
-    #blue-car-specs,
-    #green-car-specs,
-    #yellow-car-specs {
+    .parent-div {
       width: 100%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      display: none;
+    }
+    .show {
+      display:block;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+     }
+     
+    .hide{
+    display:none;
     }
   }
 }

@@ -1,39 +1,25 @@
-// switch button 
-const btnSwitch = document.getElementById('btnSwitch');
+var index = 0;
+const images = [
+  "/src/asset/img/pixel-blue-car.png",
+  "/src/asset/img/pixel-green-car.png",
+  "/src/asset/img/pixel-purple-car.png",
+  "/src/asset/img/pixel-yellow-car.png",
+];
 
-// switch color car icon 
-// let switchColor = document.getElementById('switchColor');
+var parentSpecs = document.getElementsByClassName("parent-div");
+var cnt = 0;
 
-
-// car paragraph specs
-// let carSpecs = document.getElementsByClassName('car-specs');
-// let purpleCar = document.getElementById('purple-car-specs');
-// let blueCar = document.getElementById('blue-car-specs');
-// let greenCar = document.getElementById('green-car-specs');
-// let yellowCar = document.getElementById('yellow-car-specs');
-
-// hero color cars 
-// let heroCar = document.getElementsByClassName('hero_car');
-// let heroColor = document.getElementById('hero-car-src');
-
-
-// document.getElementById("blueCar").src="src\asset\img\pixel-blue-car.png";
-
-
-const imgs = document.getElementById('imgs');
-const img = document.querySelectorAll('#carImg img');
-const src = document.getElementById('hero-car-src');
-
-let idx = 0;
-
-btnSwitch.addEventListener('click',() => {
-
-    // heroColor.src = '/src/asset/img/pixel-green-car.png';
-
-    if(idx > img.length - 1) {
-        idx = 0;
-
-    }
-})
-
-
+function changeCar() {
+  document.getElementById("hero-car-src").src = images[index++];
+  document.getElementById("img-id").src = images[index];
+  if (index == images.length + 1) {
+    index = 0;
+  }
+  var idx = cnt % 4;
+  parentSpecs[idx].classList.remove("show");
+  parentSpecs[idx].classList.add("hide");
+  idx = (idx + 1) % 4;
+  parentSpecs[idx].classList.remove("hide");
+  parentSpecs[idx].classList.add("show");
+  cnt++;
+}
